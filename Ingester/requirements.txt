@@ -1,0 +1,14 @@
+Django==4.1.12
+djangorestframework==3.14.0
+environs
+psycopg2-binary==2.9.9
+pytz
+praw
+transformers
+torch
+#tensorflow
+tf-keras
+sqlparse==0.2.4
+djangorestframework-simplejwt
+pandas
+openpyxl

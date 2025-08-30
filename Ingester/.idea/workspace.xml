@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d0d0a7a8-3c5d-4d62-b0eb-2a67d2c7c546" name="Changes" comment="fix bugs 2.0">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ingester/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ingester/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ingester/retrieve_from_reddit.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ingester/retrieve_from_reddit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ingester/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ingester/serializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ingester/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ingester/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ingester/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ingester/views.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;catudo&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/catudo/Ingester.git&quot;,
+    &quot;accountId&quot;: &quot;675a8e8e-3d43-4acd-a70f-a2ed427801c4&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2reAtxqTsdLOxXwDOKhcjIA8sO8" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Django Server.Ingester.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.mongo: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Testt.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrador/Documents/proyectos/Ingester&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrador\Documents\proyectos\Ingester\Ingester" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Django Server.Ingester">
+    <configuration name="Test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Ingester" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Ingester" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Ingester/Test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Testt" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Ingester" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Testt.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Ingester" type="Python.DjangoServer" factoryName="Django server">
+      <module name="Ingester" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="Ingester.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.13 (Ingester)" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="containerName" value="" />
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.mongo: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="containerName" value="" />
+          <option name="envFilePath" value="" />
+          <option name="services">
+            <list>
+              <option value="mongo" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Django Server.Ingester" />
+      <item itemvalue="Docker.Dockerfile" />
+      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.mongo: Compose Deployment" />
+      <item itemvalue="Python.Test" />
+      <item itemvalue="Python.Testt" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.mongo: Compose Deployment" />
+        <item itemvalue="Python.Test" />
+        <item itemvalue="Python.Testt" />
+        <item itemvalue="Docker.Dockerfile" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-PY-243.25659.43" />
+        <option value="bundled-python-sdk-181015f7ab06-4df51de95216-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.25659.43" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d0d0a7a8-3c5d-4d62-b0eb-2a67d2c7c546" name="Changes" comment="" />
+      <created>1736909385551</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1736909385551</updated>
+      <workItem from="1736909386553" duration="1695000" />
+      <workItem from="1736955072520" duration="596000" />
+      <workItem from="1736967513332" duration="598000" />
+      <workItem from="1737033742383" duration="1877000" />
+      <workItem from="1737425055992" duration="7386000" />
+      <workItem from="1737480032392" duration="1351000" />
+      <workItem from="1737481642515" duration="2317000" />
+      <workItem from="1737513496687" duration="948000" />
+      <workItem from="1737578423348" duration="5677000" />
+      <workItem from="1737661049976" duration="13509000" />
+      <workItem from="1737761117733" duration="1214000" />
+      <workItem from="1737826888617" duration="10434000" />
+      <workItem from="1738105335706" duration="575000" />
+      <workItem from="1738804372128" duration="2967000" />
+      <workItem from="1738892600562" duration="167000" />
+      <workItem from="1738893151571" duration="3202000" />
+      <workItem from="1738959057324" duration="1597000" />
+      <workItem from="1738961222192" duration="4804000" />
+      <workItem from="1739115184645" duration="231000" />
+      <workItem from="1739117316043" duration="29000" />
+      <workItem from="1739324211615" duration="5110000" />
+      <workItem from="1739398548554" duration="3754000" />
+      <workItem from="1739459450159" duration="14000" />
+      <workItem from="1739486354556" duration="4223000" />
+      <workItem from="1739571767873" duration="1245000" />
+      <workItem from="1740351402654" duration="11324000" />
+      <workItem from="1741489042384" duration="402000" />
+      <workItem from="1741489608274" duration="999000" />
+      <workItem from="1741491211896" duration="550000" />
+      <workItem from="1741491780827" duration="58000" />
+      <workItem from="1741491863040" duration="41000" />
+      <workItem from="1741492481050" duration="39000" />
+      <workItem from="1741492529483" duration="608000" />
+      <workItem from="1741493239927" duration="200000" />
+      <workItem from="1741548928162" duration="38000" />
+      <workItem from="1741549048785" duration="13000" />
+      <workItem from="1741550211180" duration="2482000" />
+      <workItem from="1741560376678" duration="626000" />
+      <workItem from="1741661579695" duration="136000" />
+      <workItem from="1742349608405" duration="116000" />
+      <workItem from="1742349960716" duration="3097000" />
+      <workItem from="1742864541541" duration="375000" />
+      <workItem from="1743280341023" duration="7433000" />
+      <workItem from="1744318494648" duration="3595000" />
+      <workItem from="1746758795253" duration="1341000" />
+      <workItem from="1746763303082" duration="30000" />
+      <workItem from="1748311271021" duration="2904000" />
+      <workItem from="1748485744057" duration="5925000" />
+      <workItem from="1748493043394" duration="45000" />
+      <workItem from="1748916658423" duration="845000" />
+      <workItem from="1755799334106" duration="1994000" />
+      <workItem from="1755806984759" duration="3966000" />
+      <workItem from="1756239292823" duration="13332000" />
+      <workItem from="1756317620903" duration="5029000" />
+      <workItem from="1756412583700" duration="983000" />
+      <workItem from="1756413615886" duration="2884000" />
+      <workItem from="1756588208103" duration="1578000" />
+    </task>
+    <task id="LOCAL-00001" summary="adding security not completed">
+      <option name="closed" value="true" />
+      <created>1739115217498</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1739115217498</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add user registration">
+      <option name="closed" value="true" />
+      <created>1739329956872</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1739329956872</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add user registration and fix errors">
+      <option name="closed" value="true" />
+      <created>1739490629392</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1739490629392</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fix errors temporally">
+      <option name="closed" value="true" />
+      <created>1744324119344</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1744324119344</updated>
+    </task>
+    <task id="LOCAL-00005" summary="change to potgress">
+      <option name="closed" value="true" />
+      <created>1746760130766</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1746760130766</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fix bugs in query">
+      <option name="closed" value="true" />
+      <created>1748489655978</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1748489655978</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fix functionalities">
+      <option name="closed" value="true" />
+      <created>1748493083225</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1748493083225</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fix bugs 2.0">
+      <option name="closed" value="true" />
+      <created>1756259604835</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1756259604835</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="adding security not completed" />
+    <MESSAGE value="add user registration" />
+    <MESSAGE value="add user registration and fix errors" />
+    <MESSAGE value="fix errors temporally" />
+    <MESSAGE value="change to potgress" />
+    <MESSAGE value="fix bugs in query" />
+    <MESSAGE value="fix functionalities" />
+    <MESSAGE value="fix bugs 2.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bugs 2.0" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/.venv/lib/python3.12/site-packages/amqp/transport.py</url>
+          <line>186</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/.venv/lib/python3.12/site-packages/djongo/sql2mongo/query.py</url>
+          <line>929</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Ingester/exception_handler.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/.venv/lib/python3.9/site-packages/rest_framework_simplejwt/views.py</url>
+          <line>40</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/.venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py</url>
+          <line>2017</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Ingester/views.py</url>
+          <line>95</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Ingester$Test.coverage" NAME="Test Coverage Results" MODIFIED="1737678367404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Ingester" />
+    <SUITE FILE_PATH="coverage/Ingester$Testt.coverage" NAME="Testt Coverage Results" MODIFIED="1737579474708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
