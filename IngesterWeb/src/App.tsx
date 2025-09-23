@@ -5,6 +5,7 @@ import { Bar } from 'react-chartjs-2';
 import { Download, LogIn, LogOut, UserPlus, BarChart2, Lock, Download as DownloadIcon, MessageSquare, Search, X, Loader } from 'lucide-react';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
 import { SuggestionForm } from './SuggestionForm.tsx';
+import { authenticatedFetch } from './utils/apiClient';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
@@ -54,18 +55,17 @@ function App() {
       
       try {
         // Step 1: Call the /ingest endpoint
-        const ingestResponse = await fetch(`${config.apiUrl}/ingest`, {
+        const ingestResponse = await authenticatedFetch(`${config.apiUrl}/ingest`, {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${authToken}`
+            'Content-Type': 'application/json'
           },
           body: JSON.stringify({
             subreddit,
             subject,
             count
           })
-        });
+        }, authToken, refreshToken, setAuthToken, setRefreshToken, handleSignOut);
 
         if (!ingestResponse.ok) {
           throw new Error('Failed to ingest data');
@@ -76,17 +76,16 @@ function App() {
         setIngestCounter(ingestData.counter);
 
         // Step 2: Only after the first call completes successfully, call the /comments/aggregate endpoint
-        const aggregateResponse = await fetch(`${config.apiUrl}/comments/aggregate/`, {
+        const aggregateResponse = await authenticatedFetch(`${config.apiUrl}/comments/aggregate/`, {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${authToken}`
+            'Content-Type': 'application/json'
           },
           body: JSON.stringify({
             subject,
             subreddit
           })
-        });
+        }, authToken, refreshToken, setAuthToken, setRefreshToken, handleSignOut);
 
         if (!aggregateResponse.ok) {
           throw new Error('Failed to aggregate comments');
@@ -216,17 +215,16 @@ function App() {
 
   const downloadExcelFromAPI = async () => {
     try {
-    const response = await fetch(`${config.apiUrl}/comments/download`, {
+    const response = await authenticatedFetch(`${config.apiUrl}/comments/download`, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${authToken}`
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify({
         subreddit,
         subject
       })
-    });
+    }, authToken, refreshToken, setAuthToken, setRefreshToken, handleSignOut);
 
       if (!response.ok) throw new Error('Download failed');
 
