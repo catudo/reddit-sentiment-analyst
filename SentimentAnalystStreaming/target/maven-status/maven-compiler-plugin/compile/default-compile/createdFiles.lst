@@ -1,0 +1,4 @@
+org/catudo/sentiment/sentimentanalyststreaming/SentimentAnalystStreamingApplication.class
+org/catudo/sentiment/sentimentanalyststreaming/config/KafkaConsumerConfig.class
+org/catudo/sentiment/sentimentanalyststreaming/service/RedditSentimentConsumer.class
+org/catudo/sentiment/sentimentanalyststreaming/models/RedditSentimentMessage.class

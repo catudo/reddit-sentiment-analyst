@@ -1,3 +1,8 @@
+'''
+This file is deprecated because this functionality is now processed
+by the Sentiment Analyst Processor via a Kafka topic.
+'''
+
 import os
 import praw
 from prawcore.exceptions import NotFound, PrawcoreException
@@ -16,6 +21,7 @@ reddit = praw.Reddit(
 
 
 @permission_classes([IsAuthenticated])
+@deprecated(version='1.1', reason="You should use the file send_kafka topic instead")
 def retrieve_from_reddit(subreddit, subject, user, query_comment=None, count=100):
     try:
         subreddit = reddit.subreddit(subreddit)

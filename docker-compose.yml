@@ -10,7 +10,55 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql
+
+  broker:
+    image: apache/kafka:latest
+    container_name: kafka_sentiment_broker
+    environment:
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+
+      # 1. Listeners
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:29092,CONTROLLER://0.0.0.0:9093,EXTERNAL://0.0.0.0:9092
+
+      # 2. Advertised Listeners
+      # - 'broker:29092' for internal Docker apps (like Kafka UI)
+      # - 'localhost:9092' for your Spring Boot app
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://broker:29092,EXTERNAL://localhost:9094
+
+      # 3. Security Map
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT,EXTERNAL:PLAINTEXT
+
+      # 4. Controller Settings
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      # FIX 2: Use service name 'broker' instead of 'localhost' for stability
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@broker:9093
+
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+      KAFKA_NUM_PARTITIONS: 3
+    ports:
+      - "9094:9092"
+      - "9093:9093"
+    volumes:
+      # FIX 3: Persist Kafka data so you don't lose topics on restart
+      - kafka_data:/var/lib/kafka/data
+
+  # FIX 4: Replaced Kafdrop (outdated) with Kafka UI (Modern, KRaft compatible)
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest
+    container_name: kafka_ui
+    depends_on:
+      - broker
+    ports:
+      - "8090:8080" # Access at http://localhost:8090
+    environment:
+      KAFKA_CLUSTERS_0_NAME: local
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: broker:29092
 
 volumes:
   postgres_data:
+  kafka_data:

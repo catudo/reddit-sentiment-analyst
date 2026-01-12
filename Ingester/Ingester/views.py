@@ -1,8 +1,8 @@
 from django.db.models import Count
 from rest_framework import status
 
-from .models import Comments, QueryComments, Suggestion
-from .retrieve_from_reddit import retrieve_from_reddit
+from .models import Comments, QueryComments
+from .send_kafka_topic import retrieve_from_reddit
 from rest_framework import generics, permissions
 from rest_framework.response import Response
 from rest_framework.views import APIView
