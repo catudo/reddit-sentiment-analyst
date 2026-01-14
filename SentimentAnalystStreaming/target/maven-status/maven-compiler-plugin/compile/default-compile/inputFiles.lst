@@ -1,4 +1,11 @@
 /Users/carlosgutierrez/Documents/reddit-sentiment-analyst/SentimentAnalystStreaming/src/main/java/org/catudo/sentiment/sentimentanalyststreaming/SentimentAnalystStreamingApplication.java
 /Users/carlosgutierrez/Documents/reddit-sentiment-analyst/SentimentAnalystStreaming/src/main/java/org/catudo/sentiment/sentimentanalyststreaming/config/KafkaConsumerConfig.java
+/Users/carlosgutierrez/Documents/reddit-sentiment-analyst/SentimentAnalystStreaming/src/main/java/org/catudo/sentiment/sentimentanalyststreaming/models/Comments.java
+/Users/carlosgutierrez/Documents/reddit-sentiment-analyst/SentimentAnalystStreaming/src/main/java/org/catudo/sentiment/sentimentanalyststreaming/models/QueryComments.java
 /Users/carlosgutierrez/Documents/reddit-sentiment-analyst/SentimentAnalystStreaming/src/main/java/org/catudo/sentiment/sentimentanalyststreaming/models/RedditSentimentMessage.java
+/Users/carlosgutierrez/Documents/reddit-sentiment-analyst/SentimentAnalystStreaming/src/main/java/org/catudo/sentiment/sentimentanalyststreaming/repository/CommentsRepository.java
+/Users/carlosgutierrez/Documents/reddit-sentiment-analyst/SentimentAnalystStreaming/src/main/java/org/catudo/sentiment/sentimentanalyststreaming/repository/QueryCommentsRepository.java
 /Users/carlosgutierrez/Documents/reddit-sentiment-analyst/SentimentAnalystStreaming/src/main/java/org/catudo/sentiment/sentimentanalyststreaming/service/RedditSentimentConsumer.java
+/Users/carlosgutierrez/Documents/reddit-sentiment-analyst/SentimentAnalystStreaming/src/main/java/org/catudo/sentiment/sentimentanalyststreaming/service/RedditService.java
+/Users/carlosgutierrez/Documents/reddit-sentiment-analyst/SentimentAnalystStreaming/src/main/java/org/catudo/sentiment/sentimentanalyststreaming/service/SentimentService.java
+/Users/carlosgutierrez/Documents/reddit-sentiment-analyst/SentimentAnalystStreaming/src/main/java/org/catudo/sentiment/sentimentanalyststreaming/service/SimpleSentimentService.java

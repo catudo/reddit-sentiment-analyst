@@ -1,4 +1,15 @@
-org/catudo/sentiment/sentimentanalyststreaming/SentimentAnalystStreamingApplication.class
 org/catudo/sentiment/sentimentanalyststreaming/config/KafkaConsumerConfig.class
 org/catudo/sentiment/sentimentanalyststreaming/service/RedditSentimentConsumer.class
+org/catudo/sentiment/sentimentanalyststreaming/repository/QueryCommentsRepository.class
 org/catudo/sentiment/sentimentanalyststreaming/models/RedditSentimentMessage.class
+org/catudo/sentiment/sentimentanalyststreaming/models/QueryComments.class
+org/catudo/sentiment/sentimentanalyststreaming/models/Comments.class
+org/catudo/sentiment/sentimentanalyststreaming/service/SimpleSentimentService.class
+org/catudo/sentiment/sentimentanalyststreaming/service/RedditService$RedditComment.class
+org/catudo/sentiment/sentimentanalyststreaming/service/RedditService.class
+org/catudo/sentiment/sentimentanalyststreaming/service/SentimentService.class
+org/catudo/sentiment/sentimentanalyststreaming/repository/CommentsRepository.class
+org/catudo/sentiment/sentimentanalyststreaming/SentimentAnalystStreamingApplication.class
+org/catudo/sentiment/sentimentanalyststreaming/service/RedditService$RedditSubmission.class
+org/catudo/sentiment/sentimentanalyststreaming/service/SentimentService$SentimentResult$SentimentResultBuilder.class
+org/catudo/sentiment/sentimentanalyststreaming/service/SentimentService$SentimentResult.class
