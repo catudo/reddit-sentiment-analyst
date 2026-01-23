@@ -114,8 +114,8 @@ class CommentsAggregationView(APIView):
     permission_classes = [IsAuthenticated]
 
     def post(self, request):
-        subject = request.query_params.get('subject')
-        subreddit = request.query_params.get('subreddit')
+        subject = request.data.get('subject') or request.query_params.get('subject')
+        subreddit = request.data.get('subreddit') or request.query_params.get('subreddit')
         user = request.user.email
 
         # Start with base query
@@ -123,9 +123,9 @@ class CommentsAggregationView(APIView):
 
         # Apply filters
         if subject:
-            query = query.filter(subject=subject)
+            query = query.filter(subject__iexact=subject)
         if subreddit:
-            query = query.filter(subreddit=subreddit)
+            query = query.filter(subreddit__iexact=subreddit)
         if user:
             query = query.filter(user=user)
 
