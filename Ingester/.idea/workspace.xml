@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0d0a7a8-3c5d-4d62-b0eb-2a67d2c7c546" name="Changes" comment="fix bugs 2.0">
-      <change beforePath="$PROJECT_DIR$/../SentimentAnalystStreaming/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SentimentAnalystStreaming/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SentimentAnalystStreaming/src/main/java/org/catudo/sentiment/sentimentanalyststreaming/service/RedditService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SentimentAnalystStreaming/src/main/java/org/catudo/sentiment/sentimentanalyststreaming/service/RedditService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SentimentAnalystStreaming/src/main/java/org/catudo/sentiment/sentimentanalyststreaming/repository/CommentsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SentimentAnalystStreaming/src/main/java/org/catudo/sentiment/sentimentanalyststreaming/repository/CommentsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SentimentAnalystStreaming/src/main/java/org/catudo/sentiment/sentimentanalyststreaming/service/RedditSentimentConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SentimentAnalystStreaming/src/main/java/org/catudo/sentiment/sentimentanalyststreaming/service/RedditSentimentConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SentimentAnalystStreaming/src/main/java/org/catudo/sentiment/sentimentanalyststreaming/service/SimpleSentimentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SentimentAnalystStreaming/src/main/java/org/catudo/sentiment/sentimentanalyststreaming/service/SimpleSentimentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/classes/org/catudo/sentiment/sentimentanalyststreaming/SentimentAnalystStreamingApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/classes/org/catudo/sentiment/sentimentanalyststreaming/SentimentAnalystStreamingApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/classes/org/catudo/sentiment/sentimentanalyststreaming/config/KafkaConsumerConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/classes/org/catudo/sentiment/sentimentanalyststreaming/config/KafkaConsumerConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/classes/org/catudo/sentiment/sentimentanalyststreaming/models/RedditSentimentMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/classes/org/catudo/sentiment/sentimentanalyststreaming/models/RedditSentimentMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/classes/org/catudo/sentiment/sentimentanalyststreaming/service/RedditSentimentConsumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/classes/org/catudo/sentiment/sentimentanalyststreaming/service/RedditSentimentConsumer.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +66,7 @@
     &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
     &quot;Python.Test.executor&quot;: &quot;Run&quot;,
     &quot;Python.Testt.executor&quot;: &quot;Run&quot;,
+    &quot;Python.generate.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -88,7 +94,7 @@
       <recent name="C:\Users\Administrador\Documents\proyectos\Ingester\Ingester" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.generate">
+  <component name="RunManager" selected="Django Server.Ingester">
     <configuration name="Test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Ingester" />
       <option name="ENV_FILES" value="" />
@@ -227,9 +233,9 @@
       <item itemvalue="Django Server.Ingester" />
       <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml.mongo: Compose Deployment" />
-      <item itemvalue="Python.generate" />
       <item itemvalue="Python.Test" />
       <item itemvalue="Python.Testt" />
+      <item itemvalue="Python.generate" />
     </list>
     <recent_temporary>
       <list>
@@ -320,7 +326,9 @@
       <workItem from="1768498382997" duration="1327000" />
       <workItem from="1768591762671" duration="594000" />
       <workItem from="1768838548319" duration="589000" />
-      <workItem from="1769129372306" duration="973000" />
+      <workItem from="1769129372306" duration="1622000" />
+      <workItem from="1769187793810" duration="324000" />
+      <workItem from="1769188292185" duration="2161000" />
     </task>
     <task id="LOCAL-00001" summary="adding security not completed">
       <option name="closed" value="true" />
@@ -451,7 +459,8 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Ingester$Test.coverage" NAME="Test Coverage Results" MODIFIED="1737678367404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Ingester" />
     <SUITE FILE_PATH="coverage/Ingester$Testt.coverage" NAME="Testt Coverage Results" MODIFIED="1737579474708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Ingester$Test.coverage" NAME="Test Coverage Results" MODIFIED="1737678367404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Ingester" />
+    <SUITE FILE_PATH="coverage/Ingester$generate.coverage" NAME="generate Coverage Results" MODIFIED="1769132532356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../.." />
   </component>
 </project>

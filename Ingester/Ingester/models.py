@@ -35,8 +35,8 @@ class Comments(models.Model):
     subreddit = models.CharField(max_length=100)
     created_utc = models.DateTimeField(auto_now_add=True)
     subject = models.CharField(max_length=100)
-    sentiment = models.CharField(max_length=20)
-    sentiment_score = models.DecimalField(decimal_places=2,max_digits=10)
+    sentiment = models.CharField(max_length=20, blank=True, null=True)
+    sentiment_score = models.DecimalField(decimal_places=2,max_digits=10, null=True)
     user = models.CharField(max_length=100)
     query = models.ForeignKey(QueryComments, on_delete=models.CASCADE, related_name='comments', null=True, blank=True)
 

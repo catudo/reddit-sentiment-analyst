@@ -18,6 +18,7 @@ import ai.djl.huggingface.translator.TextClassificationTranslatorFactory;
 @Slf4j
 public class SimpleSentimentService implements SentimentService {
 
+
 	@Override
 	public SentimentResult analyze(String text) {
 
@@ -36,7 +37,9 @@ public class SimpleSentimentService implements SentimentService {
 			// 3. Run Inference
 			Classifications result = predictor.predict(text);
 
-			return SentimentResult.builder().score(result.best().getProbability()).label(result.best().getClassName())
+			return SentimentResult.builder()
+					.score(result.best().getProbability())
+					.label(result.best().getClassName())
 					.build();
 
 		} catch (ModelNotFoundException | MalformedModelException | IOException | TranslateException e) {
