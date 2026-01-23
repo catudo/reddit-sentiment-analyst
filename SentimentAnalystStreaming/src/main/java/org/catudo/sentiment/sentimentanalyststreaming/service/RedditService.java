@@ -14,8 +14,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
-
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -54,10 +52,10 @@ public class RedditService {
             map.add("grant_type", "client_credentials");
 
             HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(map, headers);
-            ResponseEntity<JsonNode> response = restTemplate.postForEntity(url, request, JsonNode.class);
+            ResponseEntity<String> response = restTemplate.postForEntity(url, request, String.class);
 
             if (response.getStatusCode().is2xxSuccessful() && response.getBody() != null) {
-                JsonNode body = response.getBody();
+                JsonNode body = objectMapper.readTree(response.getBody());
                 accessToken = body.get("access_token").asText();
                 int expiresIn = body.get("expires_in").asInt();
                 tokenExpiration = System.currentTimeMillis() + (expiresIn * 1000L) - 10000; // buffer
@@ -99,20 +97,23 @@ public class RedditService {
             headers.set(HttpHeaders.USER_AGENT, userAgent);
             HttpEntity<String> entity = new HttpEntity<>(headers);
 
-            ResponseEntity<JsonNode> response = restTemplate.exchange(url, HttpMethod.GET, entity, JsonNode.class);
+            ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.GET, entity, String.class);
 
             List<RedditSubmission> results = new ArrayList<>();
-            if (response.getBody() != null && response.getBody().has("data")) {
-                JsonNode children = response.getBody().get("data").get("children");
-                for (JsonNode child : children) {
-                    JsonNode data = child.get("data");
-                    RedditSubmission sub = new RedditSubmission();
-                    sub.setId(data.get("id").asText());
-                    sub.setTitle(data.has("title") ? data.get("title").asText() : "");
-                    sub.setUrl(data.has("url") ? data.get("url").asText() : "");
-                    sub.setScore(data.has("score") ? data.get("score").asInt() : 0);
-                    sub.setSelftext(data.has("selftext") ? data.get("selftext").asText() : "");
-                    results.add(sub);
+            if (response.getBody() != null) {
+                JsonNode body = objectMapper.readTree(response.getBody());
+                if (body.has("data")) {
+                    JsonNode children = body.get("data").get("children");
+                    for (JsonNode child : children) {
+                        JsonNode data = child.get("data");
+                        RedditSubmission sub = new RedditSubmission();
+                        sub.setId(data.get("id").asText());
+                        sub.setTitle(data.has("title") ? data.get("title").asText() : "");
+                        sub.setUrl(data.has("url") ? data.get("url").asText() : "");
+                        sub.setScore(data.has("score") ? data.get("score").asInt() : 0);
+                        sub.setSelftext(data.has("selftext") ? data.get("selftext").asText() : "");
+                        results.add(sub);
+                    }
                 }
             }
             return results;
@@ -136,21 +137,24 @@ public class RedditService {
             headers.set(HttpHeaders.USER_AGENT, userAgent);
             HttpEntity<String> entity = new HttpEntity<>(headers);
 
-            ResponseEntity<JsonNode> response = restTemplate.exchange(url, HttpMethod.GET, entity, JsonNode.class);
+            ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.GET, entity, String.class);
 
             List<RedditComment> comments = new ArrayList<>();
             // Response is an array: [Listing(submission), Listing(comments)]
-            if (response.getBody() != null && response.getBody().isArray() && response.getBody().size() > 1) {
-                JsonNode commentsListing = response.getBody().get(1);
-                if (commentsListing.has("data") && commentsListing.get("data").has("children")) {
-                    for (JsonNode child : commentsListing.get("data").get("children")) {
-                        if ("t1".equals(child.get("kind").asText())) { // t1 = comment
-                            JsonNode data = child.get("data");
-                            RedditComment comment = new RedditComment();
-                            comment.setBody(data.has("body") ? data.get("body").asText() : "");
-                            comment.setAuthor(data.has("author") ? data.get("author").asText() : "");
-                            comment.setScore(data.has("score") ? data.get("score").asInt() : 0);
-                            comments.add(comment);
+            if (response.getBody() != null) {
+                JsonNode body = objectMapper.readTree(response.getBody());
+                if (body.isArray() && body.size() > 1) {
+                    JsonNode commentsListing = body.get(1);
+                    if (commentsListing.has("data") && commentsListing.get("data").has("children")) {
+                        for (JsonNode child : commentsListing.get("data").get("children")) {
+                            if ("t1".equals(child.get("kind").asText())) { // t1 = comment
+                                JsonNode data = child.get("data");
+                                RedditComment comment = new RedditComment();
+                                comment.setBody(data.has("body") ? data.get("body").asText() : "");
+                                comment.setAuthor(data.has("author") ? data.get("author").asText() : "");
+                                comment.setScore(data.has("score") ? data.get("score").asInt() : 0);
+                                comments.add(comment);
+                            }
                         }
                     }
                 }

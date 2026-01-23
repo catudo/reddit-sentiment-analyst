@@ -74,24 +74,36 @@
 
         <dependency>
             <groupId>ai.djl</groupId>
-            <artifactId>api</artifactId>
-            <version>0.28.0</version>
+            <artifactId>bom</artifactId>
+            <version>0.30.0</version> <type>pom</type>
+            <scope>import</scope>
         </dependency>
+
         <dependency>
-            <groupId>ai.djl.pytorch</groupId>
-            <artifactId>pytorch-engine</artifactId>
-            <version>0.28.0</version>
+            <groupId>ai.djl</groupId>
+            <artifactId>api</artifactId>
+            <version>0.30.0</version>
         </dependency>
+
         <dependency>
             <groupId>ai.djl.huggingface</groupId>
             <artifactId>tokenizers</artifactId>
-            <version>0.28.0</version>
+            <version>0.30.0</version>
         </dependency>
+
         <dependency>
-            <groupId>ai.djl</groupId>
-            <artifactId>model-zoo</artifactId>
-            <version>0.28.0</version>
+            <groupId>ai.djl.pytorch</groupId>
+            <artifactId>pytorch-engine</artifactId>
+            <version>0.30.0</version>
+            <scope>runtime</scope>
         </dependency>
+
+        <dependency>
+            <groupId>ai.djl.pytorch</groupId>
+            <artifactId>pytorch-model-zoo</artifactId>
+            <version>0.30.0</version>
+        </dependency>
+
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>

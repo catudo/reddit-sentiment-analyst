@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0d0a7a8-3c5d-4d62-b0eb-2a67d2c7c546" name="Changes" comment="fix bugs 2.0">
-      <change beforePath="$PROJECT_DIR$/../SentimentAnalystStreaming/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SentimentAnalystStreaming/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SentimentAnalystStreaming/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SentimentAnalystStreaming/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SentimentAnalystStreaming/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SentimentAnalystStreaming/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SentimentAnalystStreaming/src/main/java/org/catudo/sentiment/sentimentanalyststreaming/service/RedditSentimentConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SentimentAnalystStreaming/src/main/java/org/catudo/sentiment/sentimentanalyststreaming/service/RedditSentimentConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SentimentAnalystStreaming/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../SentimentAnalystStreaming/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/classes/org/catudo/sentiment/sentimentanalyststreaming/SentimentAnalystStreamingApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/classes/org/catudo/sentiment/sentimentanalyststreaming/SentimentAnalystStreamingApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/classes/org/catudo/sentiment/sentimentanalyststreaming/models/RedditSentimentMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/classes/org/catudo/sentiment/sentimentanalyststreaming/models/RedditSentimentMessage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/classes/org/catudo/sentiment/sentimentanalyststreaming/service/RedditSentimentConsumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/classes/org/catudo/sentiment/sentimentanalyststreaming/service/RedditSentimentConsumer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/test-classes/org/catudo/sentiment/sentimentanalyststreaming/SentimentAnalystStreamingApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/test-classes/org/catudo/sentiment/sentimentanalyststreaming/SentimentAnalystStreamingApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SentimentAnalystStreaming/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SentimentAnalystStreaming/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SentimentAnalystStreaming/src/main/java/org/catudo/sentiment/sentimentanalyststreaming/service/RedditService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SentimentAnalystStreaming/src/main/java/org/catudo/sentiment/sentimentanalyststreaming/service/RedditService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +38,9 @@
     &quot;accountId&quot;: &quot;675a8e8e-3d43-4acd-a70f-a2ed427801c4&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/.venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py" root0="SKIP_INSPECTION" />
+  </component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -97,7 +88,7 @@
       <recent name="C:\Users\Administrador\Documents\proyectos\Ingester\Ingester" />
     </key>
   </component>
-  <component name="RunManager" selected="Django Server.Ingester">
+  <component name="RunManager" selected="Python.generate">
     <configuration name="Test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Ingester" />
       <option name="ENV_FILES" value="" />
@@ -146,6 +137,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="generate" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Ingester" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../.." />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../generate.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Ingester" type="Python.DjangoServer" factoryName="Django server">
       <module name="Ingester" />
       <option name="ENV_FILES" value="" />
@@ -172,15 +187,6 @@
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
-      <deployment type="dockerfile">
-        <settings>
-          <option name="containerName" value="" />
-          <option name="sourceFilePath" value="Dockerfile" />
-        </settings>
-      </deployment>
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
@@ -219,19 +225,19 @@
     </configuration>
     <list>
       <item itemvalue="Django Server.Ingester" />
-      <item itemvalue="Docker.Dockerfile" />
       <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml.mongo: Compose Deployment" />
+      <item itemvalue="Python.generate" />
       <item itemvalue="Python.Test" />
       <item itemvalue="Python.Testt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.generate" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.mongo: Compose Deployment" />
         <item itemvalue="Python.Test" />
         <item itemvalue="Python.Testt" />
-        <item itemvalue="Docker.Dockerfile" />
       </list>
     </recent_temporary>
   </component>
@@ -310,7 +316,11 @@
       <workItem from="1756588208103" duration="1578000" />
       <workItem from="1757378712238" duration="776000" />
       <workItem from="1768244902757" duration="6629000" />
-      <workItem from="1768429265231" duration="575000" />
+      <workItem from="1768429265231" duration="1470000" />
+      <workItem from="1768498382997" duration="1327000" />
+      <workItem from="1768591762671" duration="594000" />
+      <workItem from="1768838548319" duration="589000" />
+      <workItem from="1769129372306" duration="973000" />
     </task>
     <task id="LOCAL-00001" summary="adding security not completed">
       <option name="closed" value="true" />

@@ -1,5 +1,6 @@
 package org.catudo.sentiment.sentimentanalyststreaming.models;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -35,6 +36,7 @@ public class Comments {
     private String sentiment;
     private Double sentimentScore;
 
+	@Column(name = "\"user\"")
     private String user;
 
     @ManyToOne

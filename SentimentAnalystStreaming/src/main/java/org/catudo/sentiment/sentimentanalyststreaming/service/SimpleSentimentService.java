@@ -9,42 +9,40 @@ import ai.djl.repository.zoo.ZooModel;
 import ai.djl.training.util.ProgressBar;
 import ai.djl.translate.TranslateException;
 import org.springframework.stereotype.Service;
-
 import java.io.IOException;
-import java.math.BigDecimal;
+import lombok.extern.slf4j.Slf4j;
+import ai.djl.huggingface.translator.TextClassificationTranslatorFactory;
+
 
 @Service
+@Slf4j
 public class SimpleSentimentService implements SentimentService {
 
-    @Override
-    public SentimentResult analyze(String text) {
+	@Override
+	public SentimentResult analyze(String text) {
 
 		Criteria<String, Classifications> criteria = Criteria.builder()
 				.setTypes(String.class, Classifications.class)
-				.optModelUrls("djl://ai.djl.huggingface.pytorch/tabularisai/multilingual-sentiment-analysis")
+				.optModelUrls("src/main/resources/tabularisai-sentiment.pt")
 				.optEngine("PyTorch")
-				.optOption("hasParameter", "false") // HuggingFace models often need this
+				.optTranslatorFactory(new TextClassificationTranslatorFactory()) // Auto-detects input/output format
 				.optProgress(new ProgressBar())
 				.build();
 
+		// 2. Load the model and create a predictor
 		try (ZooModel<String, Classifications> model = criteria.loadModel();
-			 Predictor<String, Classifications> predictor = model.newPredictor()) {
+				Predictor<String, Classifications> predictor = model.newPredictor()) {
 
+			// 3. Run Inference
 			Classifications result = predictor.predict(text);
 
-			for (Classifications.Classification c : result.items()) {
-				System.out.printf("%s: %.4f%n", c.getClassName(), c.getProbability());
-			}
-			return SentimentResult.builder().label(result.best().getClassName()).score(result.best().getProbability()).build();
+			return SentimentResult.builder().score(result.best().getProbability()).label(result.best().getClassName())
+					.build();
 
-		} catch (ModelNotFoundException e) {
-			throw new RuntimeException(e);
-		} catch (MalformedModelException e) {
-			throw new RuntimeException(e);
-		} catch (IOException e) {
-			throw new RuntimeException(e);
-		} catch (TranslateException e) {
+		} catch (ModelNotFoundException | MalformedModelException | IOException | TranslateException e) {
 			throw new RuntimeException(e);
 		}
+
 	}
+
 }
