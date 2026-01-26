@@ -8,6 +8,7 @@ import ai.djl.repository.zoo.ModelNotFoundException;
 import ai.djl.repository.zoo.ZooModel;
 import ai.djl.training.util.ProgressBar;
 import ai.djl.translate.TranslateException;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import java.io.IOException;
 import lombok.extern.slf4j.Slf4j;
@@ -19,12 +20,15 @@ import ai.djl.huggingface.translator.TextClassificationTranslatorFactory;
 public class SimpleSentimentService implements SentimentService {
 
 
+	@Value("${model.path}")
+	public static String MODEL_PATH;
+
 	@Override
 	public SentimentResult analyze(String text) {
 
 		Criteria<String, Classifications> criteria = Criteria.builder()
 				.setTypes(String.class, Classifications.class)
-				.optModelUrls("src/main/resources/tabularisai-sentiment.pt")
+				.optModelUrls(MODEL_PATH)
 				.optEngine("PyTorch")
 				.optTranslatorFactory(new TextClassificationTranslatorFactory()) // Auto-detects input/output format
 				.optProgress(new ProgressBar())
