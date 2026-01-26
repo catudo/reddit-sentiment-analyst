@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-uw*c!qdwm2!5m38(fhsf&ai^_$+)xn6(h+$45&=w$6ro613(=5
 DEBUG = True
 
 POSTGRES_USER = os.environ.get('POSTGRES_USER')
-POSTGRES_PWD = os.environ.get('POSTGRES_USER')
+POSTGRES_PWD = os.environ.get('POSTGRES_PWD')
 
 ALLOWED_HOSTS = []
 
