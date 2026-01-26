@@ -11,6 +11,9 @@ import ai.djl.translate.TranslateException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import java.io.IOException;
+import java.nio.file.Path;
+import java.util.Map;
+
 import lombok.extern.slf4j.Slf4j;
 import ai.djl.huggingface.translator.TextClassificationTranslatorFactory;
 
@@ -30,8 +33,10 @@ public class SimpleSentimentService implements SentimentService {
 				.setTypes(String.class, Classifications.class)
 				.optModelUrls(MODEL_PATH)
 				.optEngine("PyTorch")
-				.optTranslatorFactory(new TextClassificationTranslatorFactory()) // Auto-detects input/output format
+				.optTranslatorFactory(new TextClassificationTranslatorFactory())
 				.optProgress(new ProgressBar())
+				.optArguments(Map.of("tokenizer", Path.of(MODEL_PATH)
+						                                  .resolveSibling("tokenizer.json").toString()))
 				.build();
 
 		// 2. Load the model and create a predictor

@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0d0a7a8-3c5d-4d62-b0eb-2a67d2c7c546" name="Changes" comment="fix bugs 2.0">
-      <change beforePath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/test-classes/org/catudo/sentiment/sentimentanalyststreaming/SentimentAnalystStreamingApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/test-classes/org/catudo/sentiment/sentimentanalyststreaming/SentimentAnalystStreamingApplicationTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/test-classes/org/catudo/sentiment/sentimentanalyststreaming/service/RedditSentimentConsumerTest$KafkaTestConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/test-classes/org/catudo/sentiment/sentimentanalyststreaming/service/RedditSentimentConsumerTest$KafkaTestConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/test-classes/org/catudo/sentiment/sentimentanalyststreaming/service/RedditSentimentConsumerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/test-classes/org/catudo/sentiment/sentimentanalyststreaming/service/RedditSentimentConsumerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/test-classes/org/catudo/sentiment/sentimentanalyststreaming/SentimentAnalystStreamingApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/test-classes/org/catudo/sentiment/sentimentanalyststreaming/service/RedditSentimentConsumerTest$KafkaTestConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/test-classes/org/catudo/sentiment/sentimentanalyststreaming/service/RedditSentimentConsumerTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -326,7 +325,7 @@
       <workItem from="1769129372306" duration="1622000" />
       <workItem from="1769187793810" duration="324000" />
       <workItem from="1769188292185" duration="4641000" />
-      <workItem from="1769460996978" duration="953000" />
+      <workItem from="1769460996978" duration="1567000" />
     </task>
     <task id="LOCAL-00001" summary="adding security not completed">
       <option name="closed" value="true" />
