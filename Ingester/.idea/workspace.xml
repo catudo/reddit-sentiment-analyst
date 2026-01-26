@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d0d0a7a8-3c5d-4d62-b0eb-2a67d2c7c546" name="Changes" comment="fix bugs 2.0">
-      <change beforePath="$PROJECT_DIR$/../IngesterWeb/src/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../IngesterWeb/src/config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/classes/org/catudo/sentiment/sentimentanalyststreaming/SentimentAnalystStreamingApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/classes/org/catudo/sentiment/sentimentanalyststreaming/SentimentAnalystStreamingApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/classes/org/catudo/sentiment/sentimentanalyststreaming/config/KafkaConsumerConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/classes/org/catudo/sentiment/sentimentanalyststreaming/config/KafkaConsumerConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/classes/org/catudo/sentiment/sentimentanalyststreaming/models/RedditSentimentMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/classes/org/catudo/sentiment/sentimentanalyststreaming/models/RedditSentimentMessage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/classes/org/catudo/sentiment/sentimentanalyststreaming/service/RedditSentimentConsumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SentimentAnalystStreaming/target/classes/org/catudo/sentiment/sentimentanalyststreaming/service/RedditSentimentConsumer.class" afterDir="false" />
-    </list>
+    <list default="true" id="d0d0a7a8-3c5d-4d62-b0eb-2a67d2c7c546" name="Changes" comment="fix bugs 2.0" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -326,7 +320,7 @@
       <workItem from="1768838548319" duration="589000" />
       <workItem from="1769129372306" duration="1622000" />
       <workItem from="1769187793810" duration="324000" />
-      <workItem from="1769188292185" duration="4037000" />
+      <workItem from="1769188292185" duration="4641000" />
     </task>
     <task id="LOCAL-00001" summary="adding security not completed">
       <option name="closed" value="true" />
